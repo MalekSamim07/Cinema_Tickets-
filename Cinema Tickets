@@ -1,0 +1,35 @@
+Movie Ticket Pricing
+
+
+print('='*60)
+print(' ')
+print('                          -ABC CINEMA-')
+print(' ')
+print('='*60)
+print(' ')
+print('            <PLEASE PROVIDE INFORMATION FOR BOOKING>')
+print(' ')
+TICKETS = int(input('How Many Tickets You Want To Book ?'))
+STUDENT = int(input('If You Are Student Enter 1 :-'))
+WEEKEND = int(input('If Its Weekend Enter 1 :-'))
+AGE = int(input('Enter Your Age:-'))
+TOTAL_PRIC =0
+
+if  AGE <= 5 :
+ print('free')
+elif AGE>=6 and AGE >= 12:
+ TOTAL_PRIC = TICKETS * 100
+elif AGE>=13 and AGE >= 59:
+ TOTAL_PRIC = TICKETS * 200
+elif AGE >= 60:
+ TOTAL_PRIC = TICKETS * 120
+elif STUDENT == 1:
+ TOTAL_PRIC =  TOTAL_PRIC -  (TOTAL_PRIC * 20 /100)
+elif WEEKEND == 1:
+ TOTAL_PRIC =   TOTAL_PRIC + (TOTAL_PRIC * 15 /100)
+elif  TICKETS >= 5:
+  TOTAL_PRIC =   TOTAL_PRIC  - (TOTAL_PRIC * 10 /100)
+
+
+print(TOTAL_PRIC)
+print('You Have To Pay ',TOTAL_PRIC)
